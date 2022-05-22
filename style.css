@@ -73,7 +73,7 @@ a {
     border-radius: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 38.0rem 1fr;
+
 
     position: relative;
 
@@ -148,7 +148,8 @@ button:hover {
 
 .info-2 {
     display: grid;
-    padding: 30px;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 30px;
     background-color: white;
 }
 
