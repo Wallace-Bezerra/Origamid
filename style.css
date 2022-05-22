@@ -137,7 +137,7 @@ button:hover {
     /* border: 2px solid blue; */
 
     color: #000000;
-    overflow-wrap: break-word;
+    /* word-break: break-all; */  
     background-color: #f8f6f6;
 }
 
@@ -219,8 +219,14 @@ a:hover {
     .bike-image::before{
         content: none;
     }
+    .bike-image{
+       grid-column: 2;
+    }
     button{
-        padding: 1.2rem 7.0rem;
+        padding: 1.5rem 8.0rem;
+    }
+    h3{
+        text-align: center;
     }
     .conteudo{
         grid-template-columns:  minmax(400px, 1fr);
@@ -229,35 +235,47 @@ a:hover {
     }
     .info-1{
         align-items: center;
-
     }
-    
-        
-    
-    /* .info-1 p{
-        max-width: 400px;
-        color: blue;
-        
-    } */
-    /* .info-1 h1{
-        color: blue;
-    } */
+    .info-2{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-@media (max-width:570px)
+@media (max-width:896px)
 {
+    .bike-image{
+        grid-column: 1;
+     }
+     
     .menu{
         flex-direction:column;
         flex-wrap: none ;
     }
     .menu-item{
-        padding: 2rem 8rem;
-        border: 4px solid #000000 ;
-        
+        width: 100px;
+        text-align: center;
+        padding: 2rem 6rem;        
     }
-    h3{
-        overflow-wrap:break-word;
-        color: red;
-        border: 5px solid black;
+    
+} 
+@media (max-width:802px){
+    .info-2{
+        grid-template-columns: 1fr;
     }
+}
+@media(max-width:569px){
+    body{
+        margin-top: 30px;
+        gap:30px;
+    }
+    header{
+        gap:30px;
+    }
+    .vantagens h3{
+        font-size: 32px;
+    }
+        .info-1 h2{
+            width:12ch;
+            text-align: center;
+        }
 }
